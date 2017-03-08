@@ -75,16 +75,16 @@ ul.accordion li{
 }
 /* background images for the accoridion pages 1-4*/
 ul.accordion li.bg1{
-    background-image:url(../images/1.jpg);
+    background-image:url(../1.jpg);
 }
 ul.accordion li.bg2{
-    background-image:url(../images/2.jpg);
+    background-image:url(../2.jpg);
 }
 ul.accordion li.bg3{
-    background-image:url(../images/3.jpg);
+    background-image:url(../3.jpg);
 }
 ul.accordion li.bg4{
-    background-image:url(../images/4.jpg);
+    background-image:url(../4.jpg);
 }
 
 /* border line on the left of acc*/
