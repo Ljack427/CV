@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta name="”viewport”" content="”width=device-width," initial-scale="1," maximum-scale="1," minimum-scale="1″">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Lisa Jack Portfolio</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link href="Contacts_files/css_002.css" rel="stylesheet">
+<link href="Contacts_files/css.css" rel="stylesheet">
+<link href="Contacts_files/default.css" rel="stylesheet" type="text/css" media="all">
+<link rel="stylesheet" type="text/css" media="all" href="Contacts_files/jquery.css">
+<script type="text/javascript" src="Contacts_files/jquery_002.js"></script>
+<script type="text/javascript" src="Contacts_files/jquery.js"></script>
+
+<script language="JavaScript"> var message="Function Disabled!"; function clickIE4(){ if (event.button==2)
+{ alert(message); return false; } } function clickNS4(e){ if (document.layers||document.getElementById&&!document.all)
+{ if (e.which==2||e.which==3){ alert(message); return false; } } } if (document.layers){ document.captureEvents(Event.MOUSEDOWN); 
+document.onmousedown=clickNS4; } else if (document.all&&!document.getElementById)
+{ document.onmousedown=clickIE4; } document.oncontextmenu=new Function("alert(message);return false") 
+</script><script type="text/javascript">
+	function validateEmail(email) { 
+		var reg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+		return reg.test(email);
+	}
+
+	$(document).ready(function() {
+		$(".modalbox").fancybox();
+		$("#contact").submit(function() { return false; });
+
+		
+		$("#send").on("click", function(){
+			var emailval  = $("#email").val();
+			var msgval    = $("#msg").val();
+			var msgval    = $("#name").val();
+			var msglen    = msgval.length;
+			var mailvalid = validateEmail(emailval);
+			
+			
+			if(mailvalid == false) {
+				$("#name").addClass("error");
+			}
+			else if(mailvalid == true){
+				$("#name").removeClass("error");
+			}
+			
+			if(mailvalid == false) {
+				$("#email").addClass("error");
+			}
+			else if(mailvalid == true){
+				$("#email").removeClass("error");
+			}
+			
+			if(msglen < 4) {
+				$("#msg").addClass("error");
+			}
+			else if(msglen >= 4){
+				$("#msg").removeClass("error");
+			}
+			
+			if(mailvalid == true && msglen >= 4) {
+				// if both validate attempt to send the e-mail
+				// first hide the submit btn so the user doesnt click twice
+				$("#send").replaceWith("<em>sending...</em>");
+				
+				$.ajax({
+					type: 'POST',
+					url: '/sendmessage.php',
+					data: $("#contact").serialize(),
+					success: function(data) {
+						if(data = "true") {
+							$("#contact").fadeOut("fast", function(){
+								$(this).before("<p><strong>Success! Your feedback has been sent, thanks :)</strong></p>");
+								setTimeout("$.fancybox.close()", 1000);
+							});
+						}
+					}
+				});
+			}
+		});
+	});
+</script>
+</head>
+
+<body>
+<div id="logo" class="container">
+	<h1><a href="http://jackl.uwmsois.com/LisaJackCV.html" target="_blank">Lisa<span>Jack</span></a></h1>
+</div>
+
+<div id="menu" class="container">
+	<ul>
+		<li><a href="Final.html" accesskey="1" title="Homepage">homepage</a></li>
+		<li><a href="http://jackl.uwmsois.com/LisaJackBriefCV.pdf" accesskey="1" target=".blank"title="Brief CV">Brief CV</a></li>
+		<li><a href="About.html" accesskey="2" title="">About</a></a></li>
+		<li><a href="Current Projects.html" accesskey="3" title="">Current Projects</a></a></li>
+		<li class="current_page_item"><a href="Contacts.html" accesskey="4" title="">Contact</a></li>
+		</ul>
+</div>
+
+<div id="banner" class="container"> <img src="lj bg1.jpg" alt="Lisa Jack Banner" /></div>
+
+<div id="footer" class="container">
+	
+	<div class="title"><h2>Lisa<span class="byline"> Jack</span></h2></div>
+			<div id="fbox1">
+			<h3>Contact Information</h3>
+			<ul>
+			<li><a href="mailto:lisabethjack@gmail.com/"target="_blank">lisabethjack@gmail.com</a></li>
+			<li><a href="http://www.visitmadison.com/" target="_blank">Residence: Madison, Wisconsin</a></li>
+			</ul>	
+</div>
+			<div id="fbox4">				
+			<h3>Send Request for references</h3>
+				<p><a class="modalbox" href="#inline">click to open</a></p>
+				</div>
+				</div>		
+			
+			
+		
+<div id="inline" style="display: none;">
+	<h2>Send Request</h2>
+
+	<form id="contact" name="contact" action="sendmessage.php" method="post">
+		<label for="Name">Your Name</label>
+		<input id="name" name="name" class="txt" type="name">
+		<br>
+		<label for="email">Your E-mail</label>
+		<input id="email" name="email" class="txt" type="email">
+		<br>
+		<label for="msg">Company Name and Reason For Request</label>
+		<textarea id="msg" name="msg" class="txtarea"></textarea>
+		<button id="send">Send E-mail</button>
+	</form>
+		<a href="#" class="image image-full"><img src="Contacts_files/pic02.htm" alt=""></a>
+</div>
+
+<div id="copyright" class="container">
+	<p>&copy; Untitled. All rights reserved. | Artwork by: Lisa Jack | Web Design by: Lisa Jack | Violators who do not conform to the copyright will be hunted and Prosecuted</p>
+</div>
+</body>
+</html>

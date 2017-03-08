@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>Lisa Jack</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="description" content="Lisa Jack Net-Com Engineer" />
+        <meta name="keywords" content="jquery, slide out,accordion, css3, fadeout, fadein, elegant, fancy, box shadow"/>
+        <link rel="stylesheet" href="css/LJCV.css" type="text/css" media="screen"/>
+  
+    </head>
+	        <!-- The JavaScript -->
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                $('#accordion > li').hover(
+                    function () {
+                        var $this = $(this);
+                        $this.stop().animate({'width':'480px'},500);
+                        $('.heading',$this).stop(true,true).fadeOut();
+                        $('.bgDescription',$this).stop(true,true).slideDown(500);
+                        $('.description',$this).stop(true,true).fadeIn();
+                    },
+                    function () {
+                        var $this = $(this);
+                        $this.stop().animate({'width':'115px'},1000);
+                        $('.heading',$this).stop(true,true).fadeIn();
+                        $('.description',$this).stop(true,true).fadeOut(500);
+                        $('.bgDescription',$this).stop(true,true).slideUp(700);
+                    }
+                );
+            });
+        </script>
+
+    <body>
+	
+        <div id="content">
+           
+          
+            <div class="Education">
+				<p>Education</p>
+                <p><a href="http://www.wisc.edu/">University of Wisconsin Madison</a></p>
+                <p><a href="http://www.uwm.edu/">University of Wisconsin Milwaukee</a></p>
+                <p><a href="https://madisoncollege.edu/">Madison Area Technical College</a></p>
+                
+            </div>
+
+
+            <ul class="accordion" id="accordion">
+                <li class="bg1">
+                    <div class="heading">About Me</div>
+                    <div class="bgDescription"></div>
+                    <div class="description">
+                        <h2>About Me</h2>
+                        <p><p>What a great time we live in, the ever evolving world of Communication and technology. 
+						I have been submersed in Technology / Communication since 1990. </p>
+						<p>Intrigued by how it all worked and what the magic was behind the hidden door? I would tear computers apart just to rebuild and network them. 
+						<p>I explored all aspects of this magic, data entry, computer graphics, building web pages, teaching Microsoft software application, technical 
+						support and consulting and now web design</p>
+						<p><a href="http://jackl.uwmsois.com/LisaJackBriefCV.pdf">Lisa Jack CV Brief</a></p>
+						
+						</div>
+                    </li>
+                
+				<li class="bg2">
+                    <div class="heading">Contact Information</div>
+                    <div class="bgDescription"></div>
+                    <div class="description">
+					    <h2>Contact Information</h2>
+                        <h3>Lisa Jack</h3>
+						<p>Phone number: 608-333-2427</p>
+						<p>Address: Sun Prairie, Wi</p> 
+						<p>email: tkdlj@yahoo.com </p>
+						<p><a href="http://www.linkedin.com/in/lisa-jack-7702408">
+						<img src="http://jackl.uwmsois.com/Linkedin.png" alt="Linked In" width="125" height="75"/></a></p>
+					</div>
+				</li>
+				
+                <li class="bg3">
+                    <div class="heading">Work Experience</div>
+                    <div class="bgDescription"></div>
+                    <div class="description">
+                        <h2>Work Experience</h2>
+						
+							<h3>Network Communicaitons Engineer</h3> 
+								<p>UW Hospitals and Clinics - 2013-Current</p>
+							<h3>Network Engineer</h3> 
+								<p>Credit Union - 2011-2013</p>
+							<h3>Burse Surveying and Engineering, Inc</h3> 
+								<p>IT Network/Communications Director - 2004-2011</p>
+                        </div>
+						
+                </li>
+                
+				<li class="bg4 bleft">
+					
+                    <div class="heading">Class Projects</div>
+                    <div class="bgDescription"></div>
+                    <div class="description">
+                        <h2>Class Projects</h2>
+                         <h3>Web Design II</h3>
+						 <p><a href="http://jackl.uwmsois.com/begin.html">Responsive Web</a></p>
+						 <p><a href="http://jackl.uwmsois.com/ReactiveWeb.html">Responsive Web II</a></p>
+						 </div>
+						 </div>									                        
+                   </li>
+            </ul>
+        </div>
+
+    </body>
+</html>
