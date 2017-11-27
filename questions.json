@@ -1,0 +1,31 @@
+{
+    "questions":[
+        {"q":"", "tf":""},
+        {"q":"", "tf":""},
+        {"q":"", "tf":""}
+    ]
+}
+{
+    "questions":[
+        {"q":"Animate CC can output to HTML5 Canvas", "tf":"true"},
+        {"q":"There is no way to run Animate CC content on iPad.", "tf":"false"},
+        {"q":"Flash Player is an integral component to the Google Chromebook experience.", "tf":"true"},
+        {"q":"The first version of Animate CC was called FutureSplash Animator.", "tf":"true"},
+        {"q":"The Paint Brush Tool was introduced in 2015.", "tf":"true"},
+        {"q":"ActionScript 3.0 is based upon an ECMAScript standard.", "tf":"true"},
+        {"q":"Animate CC cannot output content that will run in the iPhone web browser.", "tf":"false"},
+        {"q":"When targeting HTML5 Canvas, Animate CC leverages the CreateJS libraries.", "tf":"true"},
+        {"q":"Flash Player is built into Google Chrome, Internet Explorer, and Microsoft Edge.", "tf":"true"},
+        {"q":"Using Animate CC, you can build apps which run on iOS.", "tf":"true"},
+        {"q":"Animate CC is an industry standard animation and interactivity tool.", "tf":"true"},
+        {"q":"As of September 2015, there have been over 4 BILLION Adobe AIR application installs.", "tf":"true"},
+        {"q":"Animate CC content cannot be packaged as OAM files.", "tf":"false"},
+        {"q":"The current version of ActionScript (as of 2015) is AS4.", "tf":"false"},
+        {"q":"JavaScript can be edited directly in the Actions Panel.", "tf":"true"},
+        {"q":"Flash Professional CC (2015) can be used to produce ActionScript 2.0 content.", "tf":"false"},
+        {"q":"Flash Player cannot access a system webcam or microphone.", "tf":"false"},
+        {"q":"The final version of Animate CC from Macromedia was Animate CC 8.", "tf":"true"},
+        {"q":"As of September 2015, Flash Player is downloaded 1.2 BILLION times per month from Adobe.com.", "tf":"true"},
+        {"q":"Adobe continues to develop Flash Player for Android.", "tf":"false"}
+    ]
+}
