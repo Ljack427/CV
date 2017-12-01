@@ -5,18 +5,23 @@
 }
 body{
     font-family:Arial;
-    background: (images/bg01.png) repeat; center fixed;
-	background-size: cover;
+    background-image: url(./ljbg1.jpg);
+	background-repeat: no-repeat;
+	background-size:cover;
+	
+}
+	
 }
 content{
     margin:0 auto;
+	
 	
 }
 a{
     color:#444;
 }
 a:hover{
-    color:white;
+    color:Black;
 	
 }
 /* Area below acordian for education info and links*/
@@ -44,6 +49,7 @@ a:hover{
 .Education p a:hover{
       color:#333;
 }
+
 /* accordian layout and design of UL and li*/
 ul.accordion{
     list-style:none;   
@@ -53,7 +59,7 @@ ul.accordion{
     font-family: Cambria, serif;
     font-size: 16px;
     font-style: italic;
-    line-height: 1.5em;
+    line-height: 1.0em;
 }
 /*Controls the open acco position and design*/
 ul.accordion li{
@@ -75,27 +81,27 @@ ul.accordion li{
 }
 /* background images for the accoridion pages 1-4*/
 ul.accordion li.bg1{
-    background-image:url(../1.jpg);
+    background-image:url(1.jpg);
 }
 ul.accordion li.bg2{
-    background-image:url(../2.jpg);
+    background-image:url(2.jpg);
 }
 ul.accordion li.bg3{
-    background-image:url(../3.jpg);
+    background-image:url(3.jpg);
 }
 ul.accordion li.bg4{
-    background-image:url(../4.jpg);
+    background-image:url(4.jpg);
 }
 
 /* border line on the left of acc*/
 ul.accordion li.bleft{
     border-left:2px solid #fff;
 }
-/* List header for li*/
+/* List header for li inside accordian top title*/
 ul.accordion li .heading{
     background-color:#fff;
     padding:10px;
-    margin-top:60px;
+    margin-top:35px;
     opacity:0.9;
     text-transform:uppercase;
     font-style:normal;
@@ -106,26 +112,27 @@ ul.accordion li .heading{
     text-align:center;
     text-shadow:-1px -1px 1px #ccc;
 }
-/* acc0 size position on roll out and collapse*/	
+/* accordian list size position on roll out of acco.*/	
 ul.accordion li .description{
     position:absolute;
     max-width:490px;
-    height:175px;
+    height:280px;
     bottom:0px;
     left:0px;
 	display:none;
 }
-/* acc layout for h2*/
+/* accordian layout for h2*/
 ul.accordion li .description h2{
     text-transform:uppercase;
     font-style:normal;
     font-weight:bold;
     letter-spacing:1px;
-    font-size:35px;
-    color:#444;
+    font-size:37px;
+    color:#ffffff;
     text-align:left;
     margin:0px 0px 15px 20px;
-    text-shadow:-1px -1px 1px #99ddff;
+	text-outline: 2px 2px #000000;
+    text-shadow:-1px -1px 1px #000000;
 }
 /* acc layout for h3*/
 ul.accordion li .description h3{
@@ -134,32 +141,39 @@ ul.accordion li .description h3{
     font-style:normal;
     font-weight:bold;
     letter-spacing:1px;
-    font-size:14px;
-	line-height:14px;
+    font-size:18px;
+	line-height:22px;
    	padding-left:22px;
-	padding-bottom:3px;
-	padding-top: 3px;
-    color:#444;
+	padding-bottom:2px;
+	padding-top: 2px;
+    color:#ffffff;
 	text-align:left;
+	text-shadow:-1px -1px 1px #000000;
 	
 }
 /* acc layout for p*/
 ul.accordion li .description p{
-	line-height:12px;
-    margin:0px ; 
+	margin:0px ; 
     font-family: "Trebuchet MS", sans-serif;
     font-size: 12px;
     font-style: normal;
     font-weight: normal;
     text-transform: none;
     letter-spacing: normal;
-	line-height:12px;
+	line-height:20px;
    	padding-left:22px;
-	padding-bottom:2px;
+	padding-bottom:0px;
 	padding-top: 2px;
 	padding-right:2px;
-	color: #444;
+	color: #000000;
+	background-color: #ffffff;
+    padding: 10px;
+	opacity: 0.8;
+	filter:alpha(opacity=70);
+	margin:0px 0px 0px 20px;
 }
+
+
 /* acc layout for a tags inside of acc*/
 ul.accordion li .description a{
    	line-height:12px;
@@ -174,7 +188,7 @@ ul.accordion li .description a{
    	padding-left:22px;
 	padding-bottom:2px;
 	padding-top:2px;
-	color: #444; 
+	color: #000000; 
 		
 }
 /* acc layout for a hover element*/
@@ -185,7 +199,7 @@ ul.accordion li .description a:hover{
 }
 /* acc layout for background the white roll up effect with partial transparentcy*/
 ul.accordion li .bgDescription{
-    background:transparent url(../images/bgDescription.png) repeat-x top left;
+    background:transparent url(bgDescription.png) repeat-x top left;
     height:300px;
     position:absolute;
     bottom:0px;
